@@ -5,13 +5,13 @@ def lonelyinteger(a)
   a.each do |num|
     counts[num] += 1
   end
+  ## line 10-12 prints lonely integer without sorting the hash
 
   # counts.each do |elem|
   #   print "#{elem[0]}" + " " if elem[1] == 1
   # end
 
   ## The part below sorts the hash
-
   counts.sort {|a, b| a[1]<=>b[1]}.each do |elem|
     if elem[1] == 1
       puts elem[0]
